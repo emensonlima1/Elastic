@@ -44,7 +44,7 @@ public static class SerilogExtension
         app.UseMiddleware<ErrorHandlingMiddleware>();
         app.UseSerilogRequestLogging(opts =>
         {
-            opts.EnrichDiagnosticContext = LogEnricherExtensions.EnrichFromRequest;
+            opts.EnrichDiagnosticContext = LogEnricherExtension.EnrichFromRequest;
         });
 
         return app;

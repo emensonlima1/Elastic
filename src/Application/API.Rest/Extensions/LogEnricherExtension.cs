@@ -3,7 +3,7 @@ using Serilog;
 
 namespace API.Rest.Extensions;
 
-public static class LogEnricherExtensions
+public static class LogEnricherExtension
 {
     public static void EnrichFromRequest(IDiagnosticContext diagnosticContext, HttpContext httpContext)
     {
