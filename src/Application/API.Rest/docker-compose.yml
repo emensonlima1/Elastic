@@ -9,6 +9,8 @@ services:
    volumes:
     - elasticsearch-data:/usr/share/elasticsearch/data
    environment:
+    - xpack.security.enabled: true
+    - xpack.security.authc.api_key.enabled: true
     - xpack.monitoring.enabled=true
     - xpack.watcher.enabled=false
     - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
